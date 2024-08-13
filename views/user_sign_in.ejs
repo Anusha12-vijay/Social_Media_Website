@@ -1,18 +1,27 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <link rel="stylesheet" href="/css/layout.css">
+        <link rel="stylesheet" href="/css/user_profile.css">
+        
     </head>
     <body>
-        <h1>Sign In</h1>
+    <div class="container">
+        <h1 id="heading-signin">Sign In</h1>
+
+<div class="form-design">
+    <form action="/users/create-session" method="POST">
+
+        <input type="email" name="email" placeholder="Enter your email" required>
+        <input type="password" name="password" placeholder="Enter your password" required>
+        <input type="submit" value="Sign In">
+        </form>
+
+</div>
 
 
-<form action="/users/create-session" method="POST">
+    </div>
+        
 
-<input type="email" name="email" placeholder="Enter your email" required>
-<input type="password" name="password" placeholder="Enter your password" required>
-<input type="submit" value="Sign In">
-</form>
 
     </body>
 </html>

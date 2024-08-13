@@ -9,6 +9,7 @@ router.get('/sign-in',usersController.signIn)
 
 router.post('/create',usersController.create)
 //sign out
+router.get('/sign-out', usersController.destroySession);
 
 //use passport as the middleware to authenticate
 

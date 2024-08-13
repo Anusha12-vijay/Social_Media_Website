@@ -1,10 +1,23 @@
 const User=require('../models/users')
 
 
-module.exports.profile=function(req,res){
-    res.end('<h1>User Profile</h1>');
+// module.exports.profile=function(req,res){
+    module.exports.profile = function(req, res) {
+        // Assuming user data is attached to req.user by your authentication middleware
+        if (!req.isAuthenticated()) {
+            return res.redirect('/users/profile');
+        }
+        
+        // Render the profile page with user data
+        return res.render('user_profile', {
+            title: 'User Profile',
+            user: req.user
+        });
+    }
+    
+    // res.end('<h1>User Profile</h1>');
 
-}
+// }
 
 module.exports.signUp=function(req,res){
     if(req.isAuthenticated()){
@@ -54,3 +67,13 @@ module.exports.create = async function(req, res) {
 module.exports.createSession=function(req,res){
     return res.redirect('/');
 }
+
+module.exports.destroySession = function(req, res) {
+    req.logout(function(err) {
+        if (err) {
+            console.log('Error during logout:', err);
+            return res.redirect('/'); // Redirect to home or show an error message
+        }
+        return res.redirect('/'); // Redirect to home after successful logout
+    });
+};

@@ -1,13 +1,26 @@
-<link rel="stylesheet" href="/css/user_profile.css">
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="/css/user_profile.css">
+    </head>
+    <body>
+        <div class="profile-container">
+            <h1 id="heading-signup">My Profile</h1>
+    
+    
+    
+    <div class="profile-box">
+        <p>Name: <%= user.name %></p>
+    <p>Email: <%=user.email %></p>
+    </div>
+    
 
-<h1>
-    SocialNet / Profile Page
-</h1>
-
-<p><%= user.name %></p>
-<p><%=user.email %></p>
+        </div>
+       
 
 
-<form action="/users/sign-out" method="get">
+<!-- <form action="/users/sign-out" method="get">
     <button type="submit">Sign Out</button>
-</form>
+</form> -->
+</body>
+</html>

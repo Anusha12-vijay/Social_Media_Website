@@ -1,0 +1,116 @@
+/* Basic reset for margin and padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#heading-signin {
+  margin-bottom: 20px;
+  font-size: 2rem;
+  /* Adjust size as needed */
+  color: #e6118a;
+  /* Dark color for heading */
+}
+
+#heading-signup {
+  margin-bottom: 20px;
+  font-size: 2rem;
+  /* Adjust size as needed */
+  color: #e6118a;
+  /* Dark color for heading */
+}
+
+.container {
+  padding-top: 7%;
+  text-align: center;
+}
+
+.form-design {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  border: 1px solid #ddd;
+  /* Light border color */
+  border-radius: 8px;
+  /* Rounded corners */
+  background-color: white;
+  /* White background for the box */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  /* Subtle shadow */
+  max-width: 400px;
+  /* Limit the width of the box */
+  margin: 0 auto;
+  /* Center the box horizontally */
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  /* Stack form elements vertically */
+  gap: 20px;
+  /* Space between form elements */
+}
+
+input[type="email"],
+input[type="text"],
+input[type="password"] {
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+input[type="submit"] {
+  padding: 10px;
+  font-size: 1rem;
+  background-color: #fe069b;
+  /* Button background color */
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: #c80064;
+  /* Darker button color on hover */
+}
+
+.profile-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: #f0f0f0;
+  /* Light gray background for contrast */
+  padding: 30px;
+  padding-bottom: 17%;
+}
+
+.profile-box {
+  background-color: white;
+  /* White background for the box */
+  padding: 30px;
+  border: 1px solid #ddd;
+  /* Light border color */
+  border-radius: 8px;
+  /* Rounded corners */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  /* Subtle shadow */
+  max-width: 400px;
+  /* Limit the width of the box */
+  width: 100%;
+  /* Full width up to the max-width */
+  text-align: left;
+  /* Align text to the left */
+}
+
+.profile-box p {
+  font-size: larger;
+  font-weight: 800;
+  color: #f1249f;
+  padding: 10px;
+}
