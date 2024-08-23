@@ -1,26 +1,27 @@
-body .design {
+.footer {
   display: flex;
   justify-content: space-between;
-  /* Space between the left and right elements */
+  /* Distribute space between left and right items */
   align-items: center;
-  /* Vertically centers the items */
+  /* Vertically center items */
   height: 50px;
-  /* Height of the header */
+  /* Height of the footer */
   width: 100%;
   /* Full width of the viewport */
-  background-color: #fe069b;
+  background-color: #8b0042;
   /* Background color */
   padding: 0 10px;
   /* Padding on left and right */
 }
 
-body #heading {
+.footer #heading {
   font-size: large;
   color: white;
-  /* No additional margin needed here */
+  margin: 0;
+  /* Remove default margin */
 }
 
-body .horizontal-list {
+.footer .horizontal-list {
   list-style-type: none;
   /* Remove default list styling */
   padding: 0;
@@ -31,10 +32,9 @@ body .horizontal-list {
   /* Display items in a row */
   gap: 10px;
   /* Space between list items */
-  padding-right: 20px;
 }
 
-body .horizontal-list a {
+.footer .horizontal-list a {
   text-decoration: none;
   font-size: large;
   color: white;

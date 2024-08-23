@@ -1,24 +1,44 @@
-const User=require('../models/users')
+const User = require('../models/users');
 
+module.exports.profile = async function(req, res) {
+    // Assuming user data is attached to req.user by your authentication middleware
+    if (!req.isAuthenticated()) {
+        return res.redirect('/users/sign-in');
+    }
 
-// module.exports.profile=function(req,res){
-    module.exports.profile = function(req, res) {
-        // Assuming user data is attached to req.user by your authentication middleware
-        if (!req.isAuthenticated()) {
-            return res.redirect('/users/profile');
-        }
+    try {
+        // Use async/await to find the user by ID
+        const user = await User.findById(req.params.id);
         
         // Render the profile page with user data
         return res.render('user_profile', {
             title: 'User Profile',
-            user: req.user
+            user: req.user,
+            profile_user: user
         });
+    } catch (err) {
+        console.error('Error in finding user:', err);
+        return res.redirect('back');
     }
-    
+};
+
     // res.end('<h1>User Profile</h1>');
 
 // }
-
+module.exports.update = async function(req, res) {
+    try {
+        if (req.user.id == req.params.id) {
+            // Perform the update
+            await User.findByIdAndUpdate(req.params.id, req.body, { new: true });
+            return res.redirect('back');
+        } else {
+            return res.status(401).send('Unauthorized');
+        }
+    } catch (err) {
+        console.log('Error in updating user:', err);
+        return res.redirect('back');
+    }
+};
 module.exports.signUp=function(req,res){
     if(req.isAuthenticated()){
        return res.redirect('/users/profile');

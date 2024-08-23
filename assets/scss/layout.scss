@@ -1,9 +1,27 @@
-body{
-    margin:0;
-    /* text-align:center; */
-    // background-color: pink;
+// body{
+//     margin:0;
+//     /* text-align:center; */
+//     // background-color: pink;
 
-    .body{
-        height:90%;
-    }
+//     .body{
+//         height:90%;
+//     }
+// }
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%; /* Ensures the body takes the full viewport height */
+    box-sizing: border-box;
 }
+
+body {
+    display: flex;
+    flex-direction: column; /* Stacks header, main content, and footer vertically */
+}
+
+main {
+    flex: 1; /* Allows the main content to take up the remaining space */
+    background-image:linear-gradient(rgb(243, 198, 222),white);
+}
+

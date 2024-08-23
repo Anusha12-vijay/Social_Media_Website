@@ -1,35 +1,30 @@
-body {
-    #design {
-        display: flex;
-        justify-content: space-between; /* Space between the left and right elements */
-        align-items: center; /* Vertically centers the items */
-        height: 50px; /* Height of the header */
-        width: 100%; /* Full width of the viewport */
-        background-color: rgb(254, 6, 155); /* Background color */
-        padding: 0 10px; /* Padding on left and right */
-    }
-    #heading {
-        font-size: large;
-        color: white;
-        /* No additional margin needed here */
-    }
 
-    .horizontal-list {
-        list-style-type: none; /* Remove default list styling */
-        padding: 0; /* Remove default padding */
-        margin: 0; /* Remove default margin */
-        display: flex; /* Display items in a row */
-        gap: 10px; /* Space between list items */
-        padding-right: 20px;
-    }
+#design {
+    display: flex;
+    justify-content: space-between; /* Space out elements to the extreme left and right */
+    align-items: center; /* Center items vertically */
+    height: 50px; /* Adjust height as needed */
+    width: 100%; /* Full width of the viewport */
+    background-color: #8b0042; /* Background color */
+    padding: 0 10px; /* Padding on left and right */
+}
 
-    .horizontal-list a{
-        text-decoration: none;
-        font-size: large;
-        color: white;
-        
-    }
+#heading {
+    font-size: large;
+    color: white;
+    margin: 0; /* Remove default margin */
+}
 
-    
-    
+.horizontal-list {
+    list-style-type: none; /* Remove default list styling */
+    padding: 0; /* Remove default padding */
+    margin: 0; /* Remove default margin */
+    display: flex; /* Display items in a row */
+    gap: 10px; /* Space between list items */
+}
+
+.horizontal-list a {
+    text-decoration: none;
+    font-size: large;
+    color: white;
 }

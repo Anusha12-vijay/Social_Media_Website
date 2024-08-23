@@ -1,0 +1,107 @@
+#home-container {
+  display: flex;
+  
+}
+
+#home-container #feed-posts {
+  width: 70%;
+  padding: 10px;
+}
+
+#home-container #user-friends {
+  width: 30%;
+  padding: 10px;
+  border-left: 1px solid lightgrey;
+  height: 100%;
+}
+
+#home-container #user-friends a {
+  text-decoration: none;
+  color: #8b0042;
+  font-size: larger;
+}
+
+#home-container #user-friends a:hover {
+  color: #6200ff;
+}
+
+#home-container .text-color {
+  color: #8b0042;
+  font-size: large;
+  font-style: italic;
+}
+
+#home-container .heading {
+  color: #7d0645;
+  font-weight: bolder;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: xx-large;
+  text-align: center;
+  margin-bottom: 20px;
+  text-shadow: -1px -1px 0 #ffffff,  
+ 1px -1px 0 #ffffff,
+ -1px  1px 0 #ffffff,
+ 1px  1px 0 #ffffff;
+}
+
+#home-container .content {
+  color: black;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: x-large;
+}
+
+#home-container .comment {
+  font-size: large;
+}
+
+#home-container input[type='submit'] {
+  padding: 13px;
+  background-color: #8b0042;
+  color: #ffffff;
+  border: none;
+  border-radius: 15px;
+  font-size: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#home-container textarea {
+  width: 80%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 2px solid #8b0042;
+  border-radius: 8px;
+  font-size: 16px;
+  color: #8b0042;
+  background-color: #f9ecec;
+  outline: none;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+#home-container input[type="text"] {
+  width: 20%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 2px solid #8b0042;
+  border-radius: 8px;
+  font-size: 16px;
+  color: #8b0042;
+  background-color: #f9ecec;
+  outline: none;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+#home-container .x {
+  text-decoration: none;
+  color: #eb2883;
+  font-weight: bold;
+}
+
+#home-container .x a:hover {
+  color: blue;
+}
+
+#home-container h3 {
+  color: #8b0042;
+}

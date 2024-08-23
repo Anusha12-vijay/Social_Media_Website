@@ -1,26 +1,27 @@
-body #design {
+#design {
   display: flex;
   justify-content: space-between;
-  /* Space between the left and right elements */
+  /* Space out elements to the extreme left and right */
   align-items: center;
-  /* Vertically centers the items */
+  /* Center items vertically */
   height: 50px;
-  /* Height of the header */
+  /* Adjust height as needed */
   width: 100%;
   /* Full width of the viewport */
-  background-color: #fe069b;
+  background-color: #8b0042;
   /* Background color */
   padding: 0 10px;
   /* Padding on left and right */
 }
 
-body #heading {
+#heading {
   font-size: large;
   color: white;
-  /* No additional margin needed here */
+  margin: 0;
+  /* Remove default margin */
 }
 
-body .horizontal-list {
+.horizontal-list {
   list-style-type: none;
   /* Remove default list styling */
   padding: 0;
@@ -31,10 +32,9 @@ body .horizontal-list {
   /* Display items in a row */
   gap: 10px;
   /* Space between list items */
-  padding-right: 20px;
 }
 
-body .horizontal-list a {
+.horizontal-list a {
   text-decoration: none;
   font-size: large;
   color: white;

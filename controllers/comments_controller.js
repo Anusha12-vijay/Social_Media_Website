@@ -31,3 +31,27 @@ module.exports.create = async function(req, res) {
         return res.redirect('back');
     }
 };
+
+module.exports.destroy = async function(req, res) {
+    try {
+        // Find the comment by ID
+        let comment = await Comment.findById(req.params.id);
+
+        if (comment.user.equals(req.user.id)) {
+            let postId = comment.post;
+
+            // Remove the comment
+            await comment.deleteOne();
+
+            // Remove the comment reference from the post
+            await Post.findByIdAndUpdate(postId, { $pull: { comments: req.params.id } });
+
+            return res.redirect('back');
+        } else {
+            return res.redirect('back');
+        }
+    } catch (err) {
+        console.log('Error in deleting comment:', err);
+        return res.redirect('back');
+    }
+}

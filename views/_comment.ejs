@@ -1,0 +1,15 @@
+<li>
+    <p>
+        <% if (locals.user && locals.user.id==comment.user.id ){%>
+            <small >
+                <a class="x" href="/comments/destroy/<%=comment.id%>">x</a>
+            </small>
+
+        <%}%>
+        <span class="comment"><%=comment.content %></span>
+        <br>
+        <small class="text-color">
+            <%= comment.user.name %>
+        </small>
+    </p>
+</li>

@@ -1,12 +1,12 @@
 <link rel="stylesheet" href="/css/header.css">
 <header id="design">
-    <span id="heading">SocialNet</span>
+    <span id="heading">VibeSpace</span>
     
     <ul class="horizontal-list ">
         
         <% if (locals.user){%>
 
-        <li ><a href="/users/profile">
+        <li ><a href="/users/profile/<%= user._id %>">
             <%=user.name%>
 
         </a></li>

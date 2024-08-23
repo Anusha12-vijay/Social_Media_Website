@@ -1,8 +1,19 @@
-body {
+html, body {
   margin: 0;
-  /* text-align:center; */
+  padding: 0;
+  height: 100%;
+  /* Ensures the body takes the full viewport height */
+  box-sizing: border-box;
 }
 
-body .body {
-  height: 90%;
+body {
+  display: flex;
+  flex-direction: column;
+  /* Stacks header, main content, and footer vertically */
+}
+
+main {
+  flex: 1;
+  /* Allows the main content to take up the remaining space */
+  background-image: linear-gradient(#f3c6de, white);
 }
